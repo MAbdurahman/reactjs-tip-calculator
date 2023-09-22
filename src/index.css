@@ -1,13 +1,156 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Open+Sans:wght@300;400;500;700&display=swap');
+
+/* =========================================
+              Website Resets
+============================================ */
+*,
+*::after,
+*::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*::-moz-focus-inner {
+  border: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+
+ul {
+  list-style: none;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*=============================================
+         root, html and body styles
+================================================*/
+:root {
+  /**************** colors ****************/
+  --clr-monochrome-500: #194a7a;
+  --clr-monochrome-400: #476f95;
+  --clr-monochrome-300: #7593af;
+  --clr-monochrome-200: #92abc4;
+  --clr-monochrome-100: #aebfd0;
+
+  --clr-neutral-100: #fafafa;
+  --clr-neutral-200: #f0f0f0;
+  --clr-neutral-300: #d9d9d9;
+  --clr-neutral-400: #bfbfbf;
+  --clr-neutral-500: #999999;
+  --clr-neutral-600: #616161;
+  --clr-neutral-700: #303030;
+  --clr-neutral-800: #121212;
+
+  /**************** fonts ****************/
+  --ff-font-primary: 'Open Sans', sans-serif;
+  --ff-font-secondary: 'Coming Soon', cursive;
+
+  /**************** timing functions ****************/
+  --tf-timing-function-basic-01: cubic-bezier(0.26, 0.1, 0.27, 1.55);
+  --tf-timing-function-basic-02: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  --tf-timing-function-ease: cubic-bezier(0.19, 0.08, 0.46, 0.99);
+  --tf-timing-function-ease-in: cubic-bezier(0.33, 0.02, 0.84, 0.75);
+  --tf-timing-function-ease-out: cubic-bezier(0.05, 0.21, 0.66, 0.98);
+  --tf-timing-function-ease-in-out: cubic-bezier(0.38, 0, 0.57, 0.99);
+  --tf-timing-function-linear: cubic-bezier(0.19, 0.08, 0.84, 0.75);
+  --tf-timing-function-smooth: cubic-bezier(0.1, 0.7, 0.6, 0.9);
+  --tf-timing-function-snappy: cubic-bezier(0.5, 0, 0.4, 0.98);
+
+
+  /**************** box shadows ****************/
+  --bs-box-shadow-100: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  --bs-box-shadow-200: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  --bs-box-shadow-300: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  --bs-box-shadow-400: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  --bs-box-shadow-500: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  --bs-box-shadow-600: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  --bs-box-shadow-700: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  --bs-box-shadow-800: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+
+}
+html {
+  font-size: 100%;
+}
+
+@media only screen and (max-width: 420px) {
+  html {
+    font-size: 83.333%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  html {
+    font-size: 66.667%;
+  }
+}
+
+
+body {
+  font-family: var(--ff-font-primary);
+  color: #343a40;
+  color: var(--clr-neutral-700);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+
+h1, h2, h3, h4, h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: var(--ff-font-primary);
+  font-weight: 500;
+  line-height: 1;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.9rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+small, .text_small {
+  font-size: 0.8rem;
+}
+
+input, textarea {
+  font-family: var(--ff-font-secondary);
 }
