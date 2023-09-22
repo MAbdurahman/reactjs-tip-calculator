@@ -104,9 +104,9 @@ html {
 
 
 body {
+  background-color: var(--clr-neutral-200);
   font-family: var(--ff-font-primary);
-  color: #343a40;
-  color: var(--clr-neutral-700);
+  color: var(--clr-neutral-800);
   font-size: 1rem;
   font-weight: 500;
   line-height: 1;
@@ -151,6 +151,156 @@ small, .text_small {
   font-size: 0.8rem;
 }
 
-input, textarea {
+input, textarea,
+select.inputSelect, .outputText{
   font-family: var(--ff-font-secondary);
+}
+
+
+
+
+
+.title {
+  margin-top: 3em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+
+
+
+
+.wrapper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media screen and (min-width: 576px) {
+  .wrapper {
+    max-width: 544px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .wrapper {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    max-width: 1144px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .wrapper {
+    max-width: 1320px;
+  }
+}
+
+.inputText, .inputSelect {
+  display: block;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--clr-neutral-800);
+  margin-bottom: .25em;
+}
+
+.innerWrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* Large Devices (Desktops & Laptops) */
+@media (min-width: 1200px) and (max-width: 1299px) {
+  .innerWrapper {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+
+/* Medium Devices (Landscape Tablets & Medium Desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .innerWrapper {
+      width: 75%;
+    }
+}
+
+
+/* Small Devices (Portrait Tablets & Small Desktops) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .innerWrapper {
+    width: 83.33%;
+  }
+}
+
+
+/* Extra Small Devices (Landscape Phones & Portrait Tablets) */
+@media (max-width: 767px) {
+  .innerWrapper {
+    width: 83.33%;
+  }
+}
+
+
+/* Extra Small Devices (Portrait Phones & Smaller Devices) */
+@media (max-width: 480px) {
+  .innerWrapper {
+    width: 90%;
+  }
+}
+
+
+/* Extra Small Devices (Portrait Phones & Smaller Devices) */
+@media (max-width: 320px) {
+  .innerWrapper {
+    width: 98%;
+  }
+}
+
+.billInput {
+  min-width: 100%;
+}
+
+/* ==========================================
+              resetButton
+============================================= */
+.resetButton {
+  padding: 16px 32px;
+  border: 3px solid #404040;
+  border-radius: 5px;
+  color: #262626;
+  background-color: #d9d9d9;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.resetButton:hover {
+  color: #f2f2f2;
+  background: #404040 radial-gradient(circle, transparent 1%, #404040 1%) center/15000%;
+}
+
+.resetButton:active {
+  background-color: #8d8d8d;
+  background-size: 100%;
+  transition: all 0s;
 }

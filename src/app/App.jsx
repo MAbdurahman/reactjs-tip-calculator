@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import TipCalculator from "../components/TipCalculator";
 
 export default function App() {
 
     return (
-        <div>
+        <div className="wrapper">
             <TipCalculator />
         </div>
 
